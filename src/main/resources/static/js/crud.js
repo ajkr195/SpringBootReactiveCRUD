@@ -107,11 +107,12 @@ async function deleteRecord(td, id) {
 				}
 				if (response.status === 200) {
 					alert('Deletion Successful.. !');
+					openModal();
 					var table = document.getElementById("dataTable");
 					row = td.parentElement.parentElement;
 					table.deleteRow(row.rowIndex);
 				}
-				alert("Response status :: "+ response.status);
+				//alert("Response status :: "+ response.status);
 			})
 			.catch((error) => {
 				// Your error is here!
