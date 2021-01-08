@@ -91,7 +91,7 @@ h4 {
 				<div class="col-md-1 font-weight-bold"></div>
 				<div class="col-md-9">
 					<input type="submit" value="Submit"
-						class="btn btn-primary btn-block">
+						class="btn btn-sm btn-primary">
 				</div>
 			</div>
 
@@ -99,7 +99,7 @@ h4 {
 		<div class="row mt-3 mb-3">
 			<div class="col-md-1 font-weight-bold"></div>
 			<div class="col-md-9">
-				<table class="table table-sm table-striped" id="dataTable">
+				<table class="table table-sm table-hover" id="dataTable">
 					<thead>
 						<tr>
 							<th>Id</th>
@@ -146,7 +146,24 @@ h4 {
 			</div>
 		</div>
 	</div>
-
+	
+	<div class="modal fade" id="myModal2" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Update Confirmation</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">Update Successful.. !!</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 </body>
@@ -156,6 +173,10 @@ h4 {
   function openModal() {
     var myModal = new bootstrap.Modal(document.getElementById('myModal'), {  keyboard: false });
     myModal.show();
+  }
+  function openModal2() {
+	    var myModal = new bootstrap.Modal(document.getElementById('myModal2'), {  keyboard: false });
+	    myModal.show();
   }
 </script>
 <script type="text/javascript" th:src="@{/js/bootstrap.bundle.js}"></script>

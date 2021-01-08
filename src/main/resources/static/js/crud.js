@@ -82,6 +82,7 @@ async function updateRecord(formData) {
 		}
 		if (response.status === 200) {
 			alert('Update Successful.. !');
+			openModal2();
 			//alert('Update Successful.. ! \nTable will be reloaded now.!');
 			//reloadRecords();
 		}
