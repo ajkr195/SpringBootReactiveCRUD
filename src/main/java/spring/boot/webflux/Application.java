@@ -1,8 +1,11 @@
 package spring.boot.webflux;
 
+import java.util.stream.Stream;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,8 +16,10 @@ import org.springframework.data.r2dbc.connectionfactory.init.ConnectionFactoryIn
 import org.springframework.data.r2dbc.connectionfactory.init.ResourceDatabasePopulator;
 
 import io.r2dbc.spi.ConnectionFactory;
+import reactor.core.publisher.Flux;
 import spring.boot.webflux.model.Todo;
 import spring.boot.webflux.repository.TodoRepository;
+import org.springframework.r2dbc.core.DatabaseClient;
 
 @SpringBootApplication
 public class Application { // implements CommandLineRunner {
@@ -50,5 +55,15 @@ public class Application { // implements CommandLineRunner {
 //            repository.save(todo).subscribe();
 //        }
 //    }
+
+//	@Bean
+//	ApplicationRunner init(TodoRepository repository, DatabaseClient client) {
+//		return args -> {
+//			Stream<Todo> stream = Stream.of(new Todo(null, "Hi this is my first todo!", false),
+//					new Todo(null, "This one I have acomplished!", true), new Todo(null, "And this is secret", false));
+//			repository.saveAll(Flux.fromStream(stream)).then().subscribe(); // execute
+//
+//		};
+//	}
 
 }

@@ -108,6 +108,7 @@ async function deleteRecord(td, id) {
 				}
 				if (response.status === 200) {
 					alert('Deletion Successful.. !');
+					resetForm();
 					openModal();
 					var table = document.getElementById("dataTable");
 					row = td.parentElement.parentElement;

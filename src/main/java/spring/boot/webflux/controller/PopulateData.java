@@ -23,7 +23,7 @@ public class PopulateData implements CommandLineRunner {
 			System.out.println("Inserting new todo with status false ... " + todo.toString());
 			repository.save(todo).subscribe();
 			} else {
-				Todo todo = new Todo(null, "todo" + i, true);
+				Todo todo = new Todo(null, "This is my todo" + i, true);
 				System.out.println("Inserting new todo with status true ... " + todo.toString());
 				repository.save(todo).subscribe();
 			}
