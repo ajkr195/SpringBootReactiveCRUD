@@ -1,4 +1,4 @@
-package spring.boot.webflux.controller;
+package spring.boot.webflux;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
