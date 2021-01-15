@@ -23,10 +23,10 @@ public class AppController {
 //	@PostConstruct
 //	private void init() {
 //		System.out.println("Verifying Resources");
-//		for (int i = 0; i < 999; i++) {
+//		for (int i = 0; i < 5; i++) {
 //			Todo todo = new Todo(null, "todo" + i, false);
 //			System.out.println("Inserting new todo ... " + todo.toString());
-//			repository.save(todo);
+//			repository.save(todo).subscribe();
 //		}
 //	}
 
