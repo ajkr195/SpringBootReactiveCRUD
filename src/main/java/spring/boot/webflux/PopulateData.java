@@ -31,10 +31,5 @@ public class PopulateData implements CommandLineRunner {
 			
 		}
 		
-//		 Stream<Todo> stream = Stream.of(new Todo(null, "Hi this is my first todo!", false),
-//                 new Todo(null, "This one I have acomplished!", true),
-//                 new Todo(null, "And this is secret", false));
-		
-		
 	}
 }
